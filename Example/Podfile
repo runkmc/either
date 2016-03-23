@@ -2,6 +2,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 
+link_with ['Either_Target', 'Either_Tests']
 target 'Either_Tests', :exclusive => true do
   pod 'Either', :path => '../'
 
