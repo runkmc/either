@@ -4,47 +4,24 @@ import Quick
 import Nimble
 import Either
 
-class TableOfContentsSpec: QuickSpec {
+class EitherSpec: QuickSpec {
+    
+    struct User {
+        let name: String
+    }
+    
     override func spec() {
-        describe("these will fail") {
-
-            it("can do maths") {
-                expect(1) == 2
-            }
-
-            it("can read") {
-                expect("number") == "string"
-            }
-
-            it("will eventually fail") {
-                expect("time").toEventually( equal("done") )
-            }
+        describe("The Either type") {
+            let testUser = User(name: "Montgomery Scott")
             
-            context("these will pass") {
-
-                it("can do maths") {
-                    expect(23) == 23
-                }
-
-                it("can read") {
-                    expect("🐮") == "🐮"
-                }
-
-                it("will eventually pass") {
-                    var time = "passing"
-
-                    dispatch_async(dispatch_get_main_queue()) {
-                        time = "done"
-                    }
-
-                    waitUntil { done in
-                        NSThread.sleepForTimeInterval(0.5)
-                        expect(time) == "done"
-
-                        done()
-                    }
-                }
+            it("provides isLeft and isRight") {
+                let user: Either<String, User> = .Right(testUser)
+                let failure: Either<String, User> = .Left("No such user")
+                
+                expect(isRight(user)) == true
+                expect(isLeft(user)) == false
             }
+
         }
     }
 }
