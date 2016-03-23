@@ -6,11 +6,11 @@ public enum Either<T, U> {
     
 }
 
-func isRight<T, U>(item:Either<T, U>) -> Bool {
+public func isRight<T, U>(item:Either<T, U>) -> Bool {
     if case .Right = item { return true }
     return false
 }
 
-func isLeft<T, U>(item:Either<T, U>) -> Bool {
+public func isLeft<T, U>(item:Either<T, U>) -> Bool {
     return !isRight(item)
 }

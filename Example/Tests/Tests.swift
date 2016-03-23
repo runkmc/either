@@ -20,6 +20,8 @@ class EitherSpec: QuickSpec {
                 
                 expect(isRight(user)) == true
                 expect(isLeft(user)) == false
+                expect(isRight(failure)) == false
+                expect(isRight(failure)) == false
             }
 
         }
