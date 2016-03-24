@@ -18,10 +18,10 @@ class EitherSpec: QuickSpec {
                 let user: Either<String, User> = .Right(testUser)
                 let failure: Either<String, User> = .Left("No such user")
                 
-                expect(isRight(user)) == true
-                expect(isLeft(user)) == false
-                expect(isRight(failure)) == false
-                expect(isRight(failure)) == false
+                expect(Either.isRight(user)) == true
+                expect(Either.isLeft(user)) == false
+                expect(Either.isRight(failure)) == false
+                expect(Either.isLeft(failure)) == true
             }
 
         }
