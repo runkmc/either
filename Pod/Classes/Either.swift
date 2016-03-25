@@ -18,4 +18,11 @@ public enum Either<T, U> {
     public static func rights(items:[Either<T, U>]) -> [Either<T, U>] {
         return items.filter {isRight($0) }
     }
+    
+    public func map<V>(f:U->V) -> Either<T, V> {
+        switch self {
+        case let .Right(x): return .Right(f(x))
+        case let .Left(x):  return .Left(x)
+        }
+    }
 }

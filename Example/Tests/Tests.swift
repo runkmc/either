@@ -48,6 +48,17 @@ class EitherSpec: QuickSpec {
                 default: fatalError()
                 }
             }
+            
+            it("maps Right values") {
+                let data: Either<String, String> = .Right("James Kirk")
+                let result = data.map { name in User.init(name: name) }
+                
+                switch(result) {
+                case let .Right(user):
+                    expect(user.name) == "James Kirk"
+                default: fatalError()
+                }
+            }
         }
     }
 }
