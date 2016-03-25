@@ -25,4 +25,11 @@ public enum Either<T, U> {
         case let .Left(x):  return .Left(x)
         }
     }
+    
+    public func flatMap<V>(f:U->Either<T, V>) -> Either<T, V> {
+        switch self {
+        case let .Right(x): return f(x)
+        case let .Left(x): return .Left(x)
+        }
+    }
 }
