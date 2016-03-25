@@ -32,6 +32,21 @@ class EitherSpec: QuickSpec {
                 
                 expect(Either.rights(list)).to(haveCount(2))
                 expect(Either.lefts(list)).to(haveCount(1))
+                
+                switch (Either.rights(list)[0]) {
+                case let (.Right(value)) : expect(value) == "James Kirk"
+                default: fatalError()
+                }
+                
+                switch (Either.rights(list)[1]) {
+                case let (.Right(value)) : expect(value) == "William Riker"
+                default: fatalError()
+                }
+                
+                switch (Either.lefts(list)[0]) {
+                case let (.Left(value)) : expect(value) == "No such user"
+                default: fatalError()
+                }
             }
         }
     }
