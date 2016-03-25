@@ -25,10 +25,10 @@ class EitherSpec: QuickSpec {
             }
             
             it("provides lefts and rights") {
-                let user1: Either<String, User> = .Right(testUser)
-                let user2: Either<String, User> = .Right(testUser)
-                let failure: Either<String, User> = .Left("No such user")
-                let list: [Either<String, User>] = [user1, user2, failure]
+                let user1: Either<String, String> = .Right("James Kirk")
+                let user2: Either<String, String> = .Right("William Riker")
+                let failure: Either<String, String> = .Left("No such user")
+                let list: [Either<String, String>] = [user1, user2, failure]
                 
                 expect(Either.rights(list)).to(haveCount(2))
                 expect(Either.lefts(list)).to(haveCount(1))
