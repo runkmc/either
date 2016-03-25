@@ -54,8 +54,17 @@ class EitherSpec: QuickSpec {
                 let result = data.map { name in User.init(name: name) }
                 
                 switch(result) {
-                case let .Right(user):
-                    expect(user.name) == "James Kirk"
+                case let .Right(user): expect(user.name) == "James Kirk"
+                default: fatalError()
+                }
+            }
+            
+            it("leaves left values alone during map") {
+                let data: Either<String, String> = .Left("a terrible error")
+                let result = data.map { n in Int(n)! }
+                
+                switch(result) {
+                case let .Left(x): expect(x) == "a terrible error"
                 default: fatalError()
                 }
             }
