@@ -10,6 +10,13 @@ class EitherSpec: QuickSpec {
         let name: String
     }
     
+    static func flatMapTest(e:Either<String, String>) -> Either<String, [Int]> {
+        switch e {
+        case .Right(_): return .Right([3,4,5])
+        case let .Left(error): return .Left(error)
+        }
+    }
+    
     override func spec() {
         describe("The Either type") {
             let testUser = User(name: "Montgomery Scott")
