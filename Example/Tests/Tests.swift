@@ -10,11 +10,8 @@ class EitherSpec: QuickSpec {
         let name: String
     }
     
-    static func flatMapTest(e:Either<String, String>) -> Either<String, [Int]> {
-        switch e {
-        case .Right(_): return .Right([3,4,5])
-        case let .Left(error): return .Left(error)
-        }
+    static func flatMapTest(str:String) -> Either<String, [String]> {
+        return .Right([str, "and another string"])
     }
     
     override func spec() {
@@ -72,6 +69,16 @@ class EitherSpec: QuickSpec {
                 
                 switch(result) {
                 case let .Left(x): expect(x) == "a terrible error"
+                default: fatalError()
+                }
+            }
+            
+            it("flatMaps right values") {
+                let e: Either<String, String> = .Right("whatever")
+                let result = e.flatMap(EitherSpec.flatMapTest)
+                
+                switch result {
+                case let .Right(arr): expect(arr) == ["whatever", "and another string"]
                 default: fatalError()
                 }
             }
