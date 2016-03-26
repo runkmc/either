@@ -92,6 +92,16 @@ class EitherSpec: QuickSpec {
                 default: fatalError()
                 }
             }
+            
+            it("uses >>- for flatMap") {
+                let e: Either<String, String> = .Right("whatever")
+                let result = e >>- EitherSpec.flatMapTest
+                
+                switch result {
+                case let .Right(arr): expect(arr) == ["whatever", "and another string"]
+                default: fatalError()
+                }
+            }
         }
     }
 }

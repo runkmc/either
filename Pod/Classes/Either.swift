@@ -33,3 +33,9 @@ public enum Either<T, U> {
         }
     }
 }
+
+infix operator >>- { associativity left }
+
+public func >>-<T, U, V>(either:Either<T, U>, f:U->Either<T, V>) -> Either<T, V> {
+    return either.flatMap(f)
+}
