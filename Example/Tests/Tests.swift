@@ -82,6 +82,16 @@ class EitherSpec: QuickSpec {
                 default: fatalError()
                 }
             }
+            
+            it("leaves left values alone during flatMap") {
+                let e: Either<String, String> = .Left("whatever")
+                let result = e.flatMap(EitherSpec.flatMapTest)
+                
+                switch result {
+                case let .Left(error): expect(error) == "whatever"
+                default: fatalError()
+                }
+            }
         }
     }
 }
