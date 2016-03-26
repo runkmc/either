@@ -19,14 +19,14 @@ public enum Either<T, U> {
         return items.filter {isRight($0) }
     }
     
-    public func map<V>(f:U->V) -> Either<T, V> {
+    public func map<V>(@noescape f:U->V) -> Either<T, V> {
         switch self {
         case let .Right(x): return .Right(f(x))
         case let .Left(x):  return .Left(x)
         }
     }
     
-    public func flatMap<V>(f:U->Either<T, V>) -> Either<T, V> {
+    public func flatMap<V>(@noescape f:U->Either<T, V>) -> Either<T, V> {
         switch self {
         case let .Right(x): return f(x)
         case let .Left(x): return .Left(x)
