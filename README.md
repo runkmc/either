@@ -1,10 +1,10 @@
 # Either
 
-[![CI Status](http://img.shields.io/travis/Kevin McGladdery/Either.svg?style=flat)](https://travis-ci.org/Kevin McGladdery/Either)
 [![Version](https://img.shields.io/cocoapods/v/Either.svg?style=flat)](http://cocoapods.org/pods/Either)
 [![License](https://img.shields.io/cocoapods/l/Either.svg?style=flat)](http://cocoapods.org/pods/Either)
 [![Platform](https://img.shields.io/cocoapods/p/Either.svg?style=flat)](http://cocoapods.org/pods/Either)
 
+Either is an implementation of Haskell's `Either` type in Swift.
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
