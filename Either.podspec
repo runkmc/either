@@ -17,6 +17,11 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
+   From the Haskell documentation on the Either type:
+
+   The Either type represents values with two possibilities: a value of type Either a b is either Left a or Right b.
+
+   The Either type is sometimes used to represent a value which is either correct or an error; by convention, the Left constructor is used to hold an error value and the Right constructor is used to hold a correct value (mnemonic: "right" also means "correct").
                        DESC
 
   s.homepage         = "https://github.com/runkmc/either"
