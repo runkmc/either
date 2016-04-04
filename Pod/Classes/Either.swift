@@ -42,9 +42,9 @@ public enum Either<T, U> {
     }
 }
 
-/// An alternate form of flatMap.
 infix operator >>- { associativity left }
 
+/// An alternate form of flatMap.
 public func >>-<T, U, V>(either:Either<T, U>, f:U->Either<T, V>) -> Either<T, V> {
     return either.flatMap(f)
 }
