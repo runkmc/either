@@ -1,5 +1,7 @@
 public enum Either<T, U> {
+    /// One of two possible values for the Either type
     case Left(T)
+    /// One of two possible values for the Either type
     case Right(U)
     
     /// Returns true if the Either contains a Right value,
