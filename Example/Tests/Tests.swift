@@ -53,6 +53,18 @@ class EitherSpec: QuickSpec {
                 }
             }
             
+            it("provides Right values") {
+                let data: Either<String, User> = .Right(testUser)
+                
+                expect(data.rightValue()!.name) == "Montgomery Scott"
+            }
+            
+            it("provides Left values") {
+                let data: Either<String, User> = .Left("no such user")
+                
+                expect(data.leftValue()!) == "no such user"
+            }
+            
             it("maps Right values") {
                 let data: Either<String, String> = .Right("James Kirk")
                 let result = data.map { name in User.init(name: name) }

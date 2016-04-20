@@ -16,6 +16,20 @@ public enum Either<T, U> {
         return !isRight(item)
     }
     
+    public func rightValue() -> U? {
+        switch self {
+        case .Right(let value): return value
+        default: return nil
+        }
+    }
+    
+    public func leftValue() -> T? {
+        switch self {
+        case .Left(let value): return value
+        default: return nil
+        }
+    }
+    
     /// Filters out the rights in an array of Eithers, returning just the lefts.
     public static func lefts(items:[Either<T, U>]) -> [Either<T, U>] {
         return items.filter {isLeft($0) }
