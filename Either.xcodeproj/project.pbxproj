@@ -10,6 +10,7 @@
 		0ADF71581EE73BD100C66C06 /* Either.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADF714E1EE73BD100C66C06 /* Either.framework */; };
 		0ADF715D1EE73BD100C66C06 /* EitherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF715C1EE73BD100C66C06 /* EitherTests.swift */; };
 		0ADF715F1EE73BD100C66C06 /* Either.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADF71511EE73BD100C66C06 /* Either.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0ADF71691EE73CE000C66C06 /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF71681EE73CE000C66C06 /* Either.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		0ADF71571EE73BD100C66C06 /* EitherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EitherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ADF715C1EE73BD100C66C06 /* EitherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EitherTests.swift; sourceTree = "<group>"; };
 		0ADF715E1EE73BD100C66C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ADF71681EE73CE000C66C06 /* Either.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Either.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				0ADF71511EE73BD100C66C06 /* Either.h */,
 				0ADF71521EE73BD100C66C06 /* Info.plist */,
+				0ADF71681EE73CE000C66C06 /* Either.swift */,
 			);
 			path = Either;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 					0ADF714D1EE73BD100C66C06 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = P3HAZUW5GC;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					0ADF71561EE73BD100C66C06 = {
@@ -198,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ADF71691EE73CE000C66C06 /* Either.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +329,7 @@
 		0ADF71631EE73BD100C66C06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = P3HAZUW5GC;
@@ -336,6 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.kmcg.Either;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -343,6 +350,7 @@
 		0ADF71641EE73BD100C66C06 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = P3HAZUW5GC;
@@ -362,6 +370,7 @@
 		0ADF71661EE73BD100C66C06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = P3HAZUW5GC;
 				INFOPLIST_FILE = EitherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -374,6 +383,7 @@
 		0ADF71671EE73BD100C66C06 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = P3HAZUW5GC;
 				INFOPLIST_FILE = EitherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -402,6 +412,7 @@
 				0ADF71641EE73BD100C66C06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0ADF71651EE73BD100C66C06 /* Build configuration list for PBXNativeTarget "EitherTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +421,7 @@
 				0ADF71671EE73BD100C66C06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
