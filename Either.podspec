@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Either"
-  s.version          = "0.1.1"
+  s.version          = "1.0.0"
   s.summary          = "An implementation of Haskell's Either type in Swift"
 
 # This description is used to generate tags and improve search results.
@@ -34,11 +34,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '8.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'Either' => ['Pod/Assets/*.png']
-  }
-
+  s.source_files = 'Either/**/*'
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
