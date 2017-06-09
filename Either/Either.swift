@@ -9,4 +9,20 @@
 import Foundation
 
 public enum Either<T, U> {
+    /// One of two possible values for the Either type
+    case left(T)
+    /// One of two possible values for the Either type
+    case right(U)
+    
+    /// Returns true if the Either contains a Right value,
+    /// false if it is left.
+    public static func isRight(_ item:Either<T, U>) -> Bool {
+        if case .right = item { return true }
+        return false
+    }
+    
+    /// The inverse of isRight.
+    public static func isLeft(_ item:Either<T, U>) -> Bool {
+        return !isRight(item)
+    }
 }
