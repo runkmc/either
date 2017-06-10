@@ -35,5 +35,21 @@ public enum Either<T, U> {
     public static func rights(_ items:[Either<T, U>]) -> [Either<T, U>] {
         return items.filter {isRight($0) }
     }
+    
+    /// Provides the value of a right type
+    public func rightValue() -> U? {
+        switch self {
+        case .right(let value): return value
+        default: return nil
+        }
+    }
+    
+    /// Provides the value of a left type
+    public func leftValue() -> T? {
+        switch self {
+        case .left(let value): return value
+        default: return nil
+        }
+    }
 
 }

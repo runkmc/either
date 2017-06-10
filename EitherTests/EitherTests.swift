@@ -45,6 +45,18 @@ class EitherTests: XCTestCase {
         
         XCTAssertEqual(Either.rights(list).count, 2)
         XCTAssertEqual(Either.lefts(list).count, 1)
-
+    }
+    
+    func testRightValue() {
+        let testUser = User(name: "Montgomery Scott")
+        let data: Either<String, User> = .right(testUser)
+        
+        XCTAssertEqual(data.rightValue()!.name, "Montgomery Scott")
+    }
+    
+    func testLeftValue() {
+        let data: Either<String, User> = .left("no such user")
+        
+        XCTAssertEqual(data.leftValue()!, "no such user")
     }
 }
