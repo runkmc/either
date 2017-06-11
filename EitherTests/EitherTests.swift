@@ -103,4 +103,14 @@ class EitherTests: XCTestCase {
         default: fatalError()
         }
     }
+    
+    func testFlatmapOperator() {
+        let e: Either<String, String> = .right("whatever")
+        let result = e >>- EitherTests.flatMapTest
+        
+        switch result {
+        case let .right(arr): XCTAssertEqual(["whatever", "and another string"], arr)
+        default: fatalError()
+        }
+    }
 }
