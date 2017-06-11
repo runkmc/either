@@ -7,7 +7,7 @@
 Either is an implementation of Haskell's `Either` type in Swift.
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the
+## Installation
 
 ## Author
 
