@@ -59,4 +59,14 @@ class EitherTests: XCTestCase {
         
         XCTAssertEqual(data.leftValue()!, "no such user")
     }
+    
+    func testMap() {
+        let data: Either<String, String> = .right("James Kirk")
+        let result = data.map { name in User.init(name: name) }
+        
+        switch(result) {
+        case let .right(user): XCTAssertEqual(user.name, "James Kirk")
+        default: fatalError()
+        }
+    }
 }

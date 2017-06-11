@@ -51,5 +51,14 @@ public enum Either<T, U> {
         default: return nil
         }
     }
+    
+    /// Applies a function to a Right value and returns another Either containing
+    /// the result. Left values are returned untouched.
+    public func map<V>(f: (U)->V) -> Either<T, V> {
+        switch self {
+        case let .right(x): return .right(f(x))
+        case let .left(x):  return .left(x)
+        }
+    }
 
 }
