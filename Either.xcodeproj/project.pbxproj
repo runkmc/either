@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A2ED8BE1EEDF5C1006D5F3D /* EitherOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2ED8BD1EEDF5C1006D5F3D /* EitherOperators.swift */; };
 		0ADF71581EE73BD100C66C06 /* Either.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADF714E1EE73BD100C66C06 /* Either.framework */; };
 		0ADF715D1EE73BD100C66C06 /* EitherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF715C1EE73BD100C66C06 /* EitherTests.swift */; };
 		0ADF715F1EE73BD100C66C06 /* Either.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADF71511EE73BD100C66C06 /* Either.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A2ED8BD1EEDF5C1006D5F3D /* EitherOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EitherOperators.swift; sourceTree = "<group>"; };
 		0ADF714E1EE73BD100C66C06 /* Either.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Either.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ADF71511EE73BD100C66C06 /* Either.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Either.h; sourceTree = "<group>"; };
 		0ADF71521EE73BD100C66C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				0ADF71511EE73BD100C66C06 /* Either.h */,
 				0ADF71521EE73BD100C66C06 /* Info.plist */,
 				0ADF71681EE73CE000C66C06 /* Either.swift */,
+				0A2ED8BD1EEDF5C1006D5F3D /* EitherOperators.swift */,
 			);
 			path = Either;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A2ED8BE1EEDF5C1006D5F3D /* EitherOperators.swift in Sources */,
 				0ADF71691EE73CE000C66C06 /* Either.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
