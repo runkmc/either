@@ -79,4 +79,8 @@ class EitherTests: XCTestCase {
         default: fatalError()
         }
     }
+    
+    static func flatMapTest(str:String) -> Either<String, [String]> {
+        return .right([str, "and another string"])
+    }
 }
