@@ -69,4 +69,14 @@ class EitherTests: XCTestCase {
         default: fatalError()
         }
     }
+    
+    func testMapOnLefts() {
+        let data: Either<String, Int> = .left("a terrible error")
+        let result = data.map { n in n + n }
+        
+        switch(result) {
+        case let .left(str): XCTAssertEqual(str, "a terrible error")
+        default: fatalError()
+        }
+    }
 }
