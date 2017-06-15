@@ -4,7 +4,8 @@
 [![License](https://img.shields.io/cocoapods/l/Either.svg?style=flat)](http://cocoapods.org/pods/Either)
 [![Platform](https://img.shields.io/cocoapods/p/Either.svg?style=flat)](http://cocoapods.org/pods/Either)
 
-Either is an implementation of Haskell's `Either` type in Swift.
+Either is an implementation of Haskell's `Either` type in Swift. The current
+version (1.x) is compatible with Swift 3.
 ## Usage
 
 ## Installation
