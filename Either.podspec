@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Either"
-  s.version          = "1.0.2"
+  s.version          = "1.0.3"
   s.summary          = "An implementation of Haskell's Either type in Swift"
 
 # This description is used to generate tags and improve search results.
